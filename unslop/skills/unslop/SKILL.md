@@ -253,7 +253,13 @@ grep -nEi "it'?s not .*,? it'?s|not just .*(but|—)|load-bearing|surface area|n
 ```
 
 Read every hit yourself. Some are real usage — `leverage` in a finance doc,
-`orthogonal` in a linear algebra proof. The grep finds candidates, you decide.
+`orthogonal` in a linear algebra proof, `functions as` where `functions` is a
+plural noun. The grep proposes; you decide.
+
+**The detector only sees fixed strings.** It catches most of tics 1, 2, 4, 5, 6,
+7, and 8. It cannot see stacked nouns, rule-of-three lists, hedge stacks, or
+question mirroring — those need a read. A file with zero grep hits can still be
+slop.
 
 ## Red flags — you are writing slop right now
 

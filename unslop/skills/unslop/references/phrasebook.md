@@ -196,5 +196,17 @@ Better than any hedge: name the gap. "I only tested this on Postgres 15."
 | primitive | cryptography: a cryptographic primitive |
 | robust | statistics: a robust estimator |
 
+## Known false positives in the grep detector
+
+| Match | Why it fires wrongly |
+|---|---|
+| `functions as` | `functions` is often a plural noun: "export recovered functions as JSON" |
+| `leverage` | finance and mechanics use it literally |
+| `surface area` | geometry, and real attack-surface counting |
+| `full stop` | British usage meaning the punctuation mark |
+| `not just ... but` | fires on any nearby "but", including unrelated clauses |
+
+Read every hit in context. The detector proposes; you decide.
+
 Context decides. When the term has a definition the reader must know to act
 correctly, keep it and define it once.

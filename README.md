@@ -4,30 +4,23 @@ Claude Code skills: static binary analysis (angr), dynamic binary instrumentatio
 
 ## Install
 
-Install all plugins at once:
+Add the marketplace once:
 
 ```bash
-claude plugin add --from-marketplace sandbornm/my-claude-skills
+claude plugin marketplace add sandbornm/my-claude-skills
 ```
 
-Or install individual plugins:
+Then install what you want:
 
 ```bash
-# Static binary analysis (angr)
-claude plugin add sandbornm/my-claude-skills/angr-analyzer
-
-# Dynamic binary instrumentation (Frida)
-claude plugin add sandbornm/my-claude-skills/frida-instrument
-
-# Network capture analysis (pcap)
-claude plugin add sandbornm/my-claude-skills/pcap-analyzer
-
-# Crash triage and classification
-claude plugin add sandbornm/my-claude-skills/crash-triage
-
-# Plain-language editing
-claude plugin add sandbornm/my-claude-skills/unslop
+claude plugin install unslop@my-claude-skills          # plain-language editing
+claude plugin install angr-analyzer@my-claude-skills   # static binary analysis
+claude plugin install frida-instrument@my-claude-skills # dynamic instrumentation
+claude plugin install pcap-analyzer@my-claude-skills   # network capture analysis
+claude plugin install crash-triage@my-claude-skills    # crash triage
 ```
+
+Restart Claude Code afterwards so plugin commands register.
 
 ## Plugins
 
