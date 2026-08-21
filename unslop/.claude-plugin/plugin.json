@@ -1,6 +1,6 @@
 {
   "name": "unslop",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Plain-language editing for prose a person will read. Removes eleven recurring tics of machine-sounding writing \u2014 \"it's not X, it's Y\", borrowed-jargon modifiers (\"load-bearing\", \"byte-identical\", \"surface area\"), stacked nouns, SAT words, throat-clearing, empty amplifiers, inflated significance, manufactured profundity, rule-of-three lists, hedge stacks, and question mirroring \u2014 and rewrites each the way a person would say it. Includes a substitution phrasebook and a grep detector.",
   "author": {
     "name": "sandbornm"

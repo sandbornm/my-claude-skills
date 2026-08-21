@@ -10,7 +10,7 @@ allowed-tools:
   - Bash
 ---
 
-# /unslop — plain-language rewrite
+# /unslop:fix — plain-language rewrite
 
 Read `${CLAUDE_PLUGIN_ROOT}/skills/unslop/SKILL.md` first and follow it exactly.
 Keep `${CLAUDE_PLUGIN_ROOT}/skills/unslop/references/phrasebook.md` open for

@@ -59,16 +59,17 @@ profundity, rule-of-three lists, hedge stacks, and question mirroring. Ships a
 substitution phrasebook and a grep detector. Keeps numbers, caveats, and genuine
 terms of art, and forbids inventing specifics to replace vague ones.
 
-Ships a `/unslop` slash command alongside the skill:
+Ships a `/unslop:fix` command alongside the skill:
 
 ```
-/unslop README.md docs/*.md     # rewrite in place, report each tic removed
-/unslop --check CHANGELOG.md    # report only, change nothing
-/unslop                         # rewrite the file you last edited
+/unslop:fix README.md docs/*.md     # rewrite in place, report each tic removed
+/unslop:fix --check CHANGELOG.md    # report only, change nothing
+/unslop:fix                         # rewrite the file you last edited
 ```
 
-The skill also loads on its own whenever you're writing docs, PR descriptions,
-or reports.
+The skill itself loads on its own whenever you're writing docs, PR descriptions,
+or reports — no command needed. Use `/unslop:fix` when you want to point it at
+specific files.
 
 **Prerequisites:** none.
 
