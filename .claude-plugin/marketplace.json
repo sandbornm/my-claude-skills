@@ -4,8 +4,8 @@
     "name": "sandbornm"
   },
   "metadata": {
-    "description": "Security analysis skills for Claude Code: angr (static binary), Frida (dynamic binary), pcap (network capture), and crash triage",
-    "version": "1.2.0"
+    "description": "Claude Code skills: angr (static binary), Frida (dynamic binary), pcap (network capture), crash triage, and unslop (plain-language editing)",
+    "version": "1.3.0"
   },
   "plugins": [
     {
@@ -27,6 +27,11 @@
       "name": "crash-triage",
       "source": "./crash-triage",
       "description": "Crash triage: reproduce a PoC under ASAN/UBSan or a debugger, classify the crash by bug class and exploitability, and emit a severity-ranked verdict with a recommended action"
+    },
+    {
+      "name": "unslop",
+      "source": "./unslop",
+      "description": "Plain-language editing: strips \"it's not X, it's Y\", borrowed-jargon modifiers, stacked nouns, SAT words, throat-clearing, empty amplifiers, and manufactured profundity from docs and generated output"
     }
   ]
 }

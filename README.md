@@ -1,6 +1,6 @@
 # my-claude-skills
 
-Security analysis skills for Claude Code: static binary analysis (angr), dynamic binary instrumentation (Frida), network capture analysis (pcap), and crash triage.
+Claude Code skills: static binary analysis (angr), dynamic binary instrumentation (Frida), network capture analysis (pcap), crash triage, and plain-language editing (unslop).
 
 ## Install
 
@@ -24,6 +24,9 @@ claude plugin add sandbornm/my-claude-skills/pcap-analyzer
 
 # Crash triage and classification
 claude plugin add sandbornm/my-claude-skills/crash-triage
+
+# Plain-language editing
+claude plugin add sandbornm/my-claude-skills/unslop
 ```
 
 ## Plugins
@@ -51,3 +54,36 @@ Network capture analysis for digital forensics and reverse engineering. Extract 
 Triage and classify program crashes by bug class and exploitability. Reproduce a crashing input under ASAN/UBSan or a debugger, classify ASAN reports and GDB/LLDB backtraces (memory-bug, segv, ubsan, assertion, trap, leak, …), and emit a severity-ranked verdict with the responsible source frame and a recommended action. Useful for reviewing fuzzer-found crashes and deciding what to report upstream.
 
 **Prerequisites:** Python 3 (stdlib only). For reproduction: the target binary (ideally an ASAN+UBSan build); optionally `gdb` or `lldb` for a backtrace fallback.
+
+### unslop
+
+Plain-language editing for any prose a person will read — docs, READMEs, PR
+descriptions, reports, chat replies. Removes eleven recurring tics of
+machine-sounding writing: "it's not X, it's Y", borrowed-jargon modifiers
+("load-bearing", "byte-identical", "surface area"), stacked nouns, SAT words,
+throat-clearing, empty amplifiers, inflated significance, manufactured
+profundity, rule-of-three lists, hedge stacks, and question mirroring. Ships a
+substitution phrasebook and a grep detector. Keeps numbers, caveats, and genuine
+terms of art, and forbids inventing specifics to replace vague ones.
+
+Ships a `/unslop` slash command alongside the skill:
+
+```
+/unslop README.md docs/*.md     # rewrite in place, report each tic removed
+/unslop --check CHANGELOG.md    # report only, change nothing
+/unslop                         # rewrite the file you last edited
+```
+
+The skill also loads on its own whenever you're writing docs, PR descriptions,
+or reports.
+
+**Prerequisites:** none.
+
+## Standalone skills
+
+Not packaged as plugins. Copy the directory into `~/.claude/skills/` to use.
+
+### tufte-data-viz
+
+Data visualization in the tradition of Edward Tufte: maximize data-ink, erase
+chartjunk, direct-label instead of using legends, small multiples.
